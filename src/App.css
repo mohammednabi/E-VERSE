@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* cursor: url("rocket.png"), auto; */
+}
+
+body {
+  /* background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 10%,
+    rgba(5, 5, 66, 1) 45%
+  ); */
+  /* background-image: url("https://img.freepik.com/free-vector/flat-design-silver-stars-pattern_23-2149929944.jpg?w=740&t=st=1700937560~exp=1700938160~hmac=43a9b99f874375f1147d6fa93d49ab14788444cbdd20e1171782674dde69a16a"); */
+
+  background-color: #00040e;
+  overflow-x: hidden;
+  min-height: 100vh;
+  /* cursor: url("https://png.pngtree.com/png-clipart/20210314/original/pngtree-cartoon-rocket-icon-png-image_6096145.jpg"); */
+}
+
+.hero {
+  @apply w-full h-screen text-slate-300 flex flex-col  gap-5 justify-center items-center  p-10;
+}
+
+.star {
+  /*@applytext-red-500text-5xlabsolute*/
+  background-color: rgba(255, 255, 255, 0.1);
+
+  border: 2px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+}
+
+/* .nav-element {
+  @apply transition-all hover:border-b-2 hover:border-b-slate-400 hover:border-solid;
+} */
+
+.service-card {
+  @apply w-72 h-96 p-5 bg-bodyColor border-slate-300 border-solid border-2 text-slate-300 rounded-md flex flex-col  items-center gap-5;
+}
+
+.button {
+  @apply text-4xl hover:text-bodyColor p-5 border-slate-300 border-2 border-solid capitalize rounded-full;
+}
