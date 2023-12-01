@@ -6,11 +6,34 @@ const MetoerSection = () => {
     <>
       <div className=" relative w-full h-halfScreen  text-slate-300 font-bebas flex   justify-center items-center">
         <div className="relative z-20 flex flex-col gap-5  justify-center items-center">
-          <h1 className="text-6xl">Beware of meteorites</h1>
-          <h2 className="text-2xl text-slate-500">
+          <motion.h1
+            className="text-6xl"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              type: "tween",
+              ease: "easeInOut",
+            }}
+          >
+            Beware of meteorites
+          </motion.h1>
+          <motion.h2
+            className="text-2xl text-slate-500"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              type: "tween",
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          >
             Meteors can travel at high velocities, often exceeding 70,000
             kilometers per hour
-          </h2>
+          </motion.h2>
         </div>
         {/* metors */}
         <motion.div

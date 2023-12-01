@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const childRef1 = useRef();
@@ -9,7 +10,11 @@ const Navbar = () => {
 
   const refs = [childRef1, childRef2, childRef3, childRef4, childRef5];
 
-  const navElements = ["articles", "images", "community"];
+  const navElements = [
+    { title: "articles", link: "/articles" },
+    { title: "images", link: "/images" },
+    { title: "community", link: "/community" },
+  ];
   return (
     <>
       <div className="flex text-slate-300 font-bebas w-full h-16  items-center justify-between p-10 ">
@@ -42,9 +47,12 @@ const Navbar = () => {
               onMouseLeave={() => {
                 refs[index].current.style.width = "0";
               }}
-              key={element}
+              key={element.title}
             >
-              <h1>{element}</h1>
+              <Link to={element.link}>
+                <h1>{element.title}</h1>
+              </Link>
+
               <div
                 ref={refs[index]}
                 className="transition-all bg-slate-300 w-0 h-1"

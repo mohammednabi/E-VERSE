@@ -71,6 +71,7 @@ const ServiceCard = ({ title, content, icon }) => {
         bounce: 0.25,
       }}
       // whileHover={{ y: -10 }}
+      viewport={{ once: true }}
       whileInView={{ opacity: 1, y: 0 }}
       className="service-card"
     >
