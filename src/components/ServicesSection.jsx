@@ -14,26 +14,41 @@ const ServicesSection = () => {
       title: "Explore the Cosmos",
       content:
         "Discover stunning images, fascinating facts, and the latestdiscoveries about our universe.",
-      icon: <FontAwesomeIcon icon={faShuttleSpace} className="text-7xl " />,
+      icon: (
+        <FontAwesomeIcon
+          icon={faShuttleSpace}
+          className="text-5xl md:text-7xl "
+        />
+      ),
     },
     {
       title: "Astro Photography",
       content:
         "Our website features a curated collection of stunning images, showcasing the beauty and grandeur of the cosmos.",
-      icon: <FontAwesomeIcon icon={faBinoculars} className="text-7xl " />,
+      icon: (
+        <FontAwesomeIcon
+          icon={faBinoculars}
+          className="text-5xl md:text-7xl  "
+        />
+      ),
     },
     {
       title: "Community  ",
       content:
         "Connect with fellow space enthusiasts in our vibrant community. Join discussions, share your experiences, and exchange knowledge with like-minded individuals",
-      icon: <FontAwesomeIcon icon={faEarthOceania} className="text-7xl " />,
+      icon: (
+        <FontAwesomeIcon
+          icon={faEarthOceania}
+          className="text-5xl md:text-7xl  "
+        />
+      ),
     },
   ];
 
   return (
     <>
       <motion.div
-        className="flex flex-wrap justify-center items-center gap-10 p-10"
+        className="flex flex-wrap justify-center items-center gap-10 md:p-10 p-10 pt-0 "
         transition={{ delayChildren: 1 }}
       >
         {services.map((s, i) => (
@@ -77,7 +92,7 @@ const ServiceCard = ({ title, content, icon }) => {
     >
       <div className="mt-10">{icon}</div>
       <div className="flex flex-col items-center align-middle my-auto">
-        <h1 className="capitalize font-bebas text-3xl">{title}</h1>
+        <h1 className="capitalize font-bebas text-xl md:text-3xl">{title}</h1>
         <h2 className="text-sm text-center capitalize text-slate-500">
           {content}
         </h2>

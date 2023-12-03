@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import { useScroll } from "framer-motion";
 
 import Transition1 from "../components/Transition1";
+import BeforeFooter from "../components/BeforeFooter";
 
 const Home = () => {
   const { scrollYProgress, scrollY } = useScroll();
@@ -32,6 +33,7 @@ const Home = () => {
           <MetoerSection />
           <ThirdSection />
           <ReadArticlesSection />
+          <BeforeFooter />
           <Footer />
         </div>
         <StarsBackground />

@@ -29,37 +29,40 @@ const ReadArticlesSection = ({}) => {
       image:
         "https://media.istockphoto.com/id/1300652810/photo/mars-planet-3d-render-illustration-high-detailed-surface-features.jpg?s=612x612&w=0&k=20&c=V11fm3CB2JD1nmndQRTgBK-w4NOp72DXdxiOj2b9SHk=",
       position: "top-20 left-16 z-30",
-      delay: 3,
+      delay: 2,
     },
     {
       title: "our solar system will be in danger in few years ",
       image:
         "https://www.timeforkids.com/wp-content/uploads/2018/08/Planets-HERO.jpg",
       position: "top-8 left-60 z-20",
-      delay: 2,
+      delay: 2.5,
     },
     {
       title: "oxford : aliens may be more like us than we think",
       image:
         "https://www.ox.ac.uk/sites/files/oxford/field/field_image_main/Aliens.jpg",
       position: "top-20 right-16 z-20",
-      delay: 3.5,
+      delay: 3,
     },
     {
       title: "new vichile was launched by nasa",
       image:
         "https://global.jaxa.jp/projects/rockets/h3/images/h3_main_001.jpg",
       position: "top-0 right-0 z-10",
-      delay: 2.5,
+      delay: 3.5,
     },
   ];
 
   return (
     <>
-      <div className="grid h-128  grid-cols-2 p-10  mt-20">
+      <div
+        className="grid h-auto grid-cols-1 grid-rows-2  md:grid-cols-2 md:grid-rows-1 p-10 gap-5 "
+        style={{ gridTemplateRows: "minmax(0,1fr) minmax(0,auto)" }}
+      >
         <div className="flex justify-center items-center flex-col gap-5">
           <motion.h1
-            className="text-6xl text-slate-300 uppercase font-bebas"
+            className="text-3xl md:text-5xl text-slate-300 uppercase font-bebas"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -72,7 +75,7 @@ const ReadArticlesSection = ({}) => {
             read some articles
           </motion.h1>
           <motion.h2
-            className="text-xl text-slate-500 font-bebas text-center w-8/12"
+            className="text-sm md:text-lg text-slate-500 font-bebas text-center w-8/12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -116,15 +119,15 @@ const ReadArticlesSection = ({}) => {
             <h1 className="">take a look</h1>
           </motion.div>
         </div>
-        <div className="relative">
+        <div className=" relative flex  flex-wrap gap-2 justify-center items-center overflow-hidden">
           {articlesCards.map((article, i) => (
-            <div key={i} className={`absolute ${article.position} `}>
-              <ArticleCard
-                title={article.title}
-                image={article.image}
-                delay={article.delay}
-              />
-            </div>
+            <ArticleCard
+              key={i}
+              title={article.title}
+              image={article.image}
+              delay={article.delay}
+              index={i}
+            />
           ))}
         </div>
       </div>
@@ -132,10 +135,12 @@ const ReadArticlesSection = ({}) => {
   );
 };
 
-const ArticleCard = ({ title, image, delay }) => {
+const ArticleCard = ({ title, image, delay, index }) => {
   return (
     <motion.div
-      className="w-72 h-96 bg-bodyColor shadow-slate-900 shadow-2xl rounded-3xl  flex flex-col gap-5 justify-start bg-transparent-300 border-1 border-slate-300 border-solid "
+      className={`w-32 h-56 md:w-36 md:h-60 lg:w-52 lg:h-72  bg-bodyColor shadow-slate-900 shadow-2xl rounded-3xl  flex flex-col gap-5 justify-start bg-transparent-300 border-1 border-slate-300 border-solid  ${
+        index !== 0 ? "-ml-36 sm:-ml-40 md:-ml-28 lg:-ml-40" : ""
+      }`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -155,7 +160,7 @@ const ArticleCard = ({ title, image, delay }) => {
         />
       </div>
       <div className="p-5">
-        <h1 className="text-2xl font-bebas  text-slate-300 text-center ">
+        <h1 className="text-sm md:text-lg font-bebas  text-slate-300 text-center ">
           {title}
         </h1>
       </div>

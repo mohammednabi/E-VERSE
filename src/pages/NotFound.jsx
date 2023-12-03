@@ -46,7 +46,7 @@ const NotFound = () => {
       >
         <div>
           <motion.h1
-            className="text-9xl text-center text-red-600  font-bebas"
+            className=" text-9xl text-center text-red-600  font-bebas"
             initial={{ x: 0, y: 0 }}
             animate={{ x: 10, y: 2 }}
             transition={{

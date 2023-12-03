@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 const ThirdSection = () => {
   return (
     <>
-      <div className="  w-full h-128">
+      <div className="  w-full h-fit">
         <motion.h1
-          className="text-slate-300 text-center text-6xl pt-10 uppercase font-bebas"
+          className="text-slate-300 text-center text-3xl md:text-6xl pt-10 uppercase font-bebas"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

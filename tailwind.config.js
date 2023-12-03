@@ -22,6 +22,12 @@ export default {
       borderWidth: {
         1: "1px",
       },
+      fontSize: {
+        xs: ".7rem",
+      },
+      lineHeight: {
+        xs: "1rem",
+      },
     },
   },
   plugins: [],

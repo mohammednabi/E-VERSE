@@ -13,6 +13,7 @@ import Articles from "./pages/Articles";
 import NotFound from "./pages/NotFound";
 import { motion, AnimatePresence } from "framer-motion";
 import ImagesPage from "./pages/ImagesPage";
+import SingleArticle from "./components/SingleArticle";
 
 function App() {
   // const overlayRef = useRef();
@@ -62,6 +63,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />} />
           <Route path="/articles" element={<Articles />} />
+          <Route path="/article" element={<SingleArticle />} />
           <Route path="/images" element={<ImagesPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

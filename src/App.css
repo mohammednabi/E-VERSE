@@ -60,9 +60,9 @@ body {
 } */
 
 .service-card {
-  @apply w-72 h-96 p-5 bg-bodyColor border-slate-300 border-solid border-2 text-slate-300 rounded-md flex flex-col  items-center gap-5;
+  @apply w-56 h-80 md:w-72 md:h-96 p-3 md:p-5 bg-bodyColor border-slate-300 border-solid border-2 text-slate-300 rounded-md flex flex-col  items-center gap-5;
 }
 
 .button {
-  @apply text-4xl hover:text-bodyColor p-5 border-slate-300 border-2 border-solid capitalize rounded-full;
+  @apply text-sm md:text-2xl lg:text-4xl hover:text-bodyColor p-3 md:p-5 border-slate-300 border-2 border-solid capitalize rounded-full flex items-center justify-center;
 }

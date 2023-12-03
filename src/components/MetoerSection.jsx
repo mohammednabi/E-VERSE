@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 const MetoerSection = () => {
   return (
     <>
-      <div className=" relative w-full h-halfScreen  text-slate-300 font-bebas flex   justify-center items-center">
+      <div className=" relative w-full h-halfScreen  text-slate-300 font-bebas flex overflow-hidden  justify-center items-center">
         <div className="relative z-20 flex flex-col gap-5  justify-center items-center">
           <motion.h1
-            className="text-6xl"
+            className="text-3xl md:text-6xl text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -20,7 +20,7 @@ const MetoerSection = () => {
             Beware of meteorites
           </motion.h1>
           <motion.h2
-            className="text-2xl text-slate-500"
+            className="text-sm md:text-2xl w-3/4 text-center text-slate-500"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

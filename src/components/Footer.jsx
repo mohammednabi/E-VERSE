@@ -9,8 +9,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const facebookLink =
+    "https://www.facebook.com/mohammed.nabil.1042/?viewas=&should_open_composer=false&show_switched_toast=false&show_invite_to_follow=false&show_switched_tooltip=false&show_podcast_settings=false&show_community_review_changes=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true&locale=ar_AR";
+
+  const githubLink = "https://github.com/mohammednabi";
+  const linkedInLink = "https://www.linkedin.com/in/mohammed-nabil-790b951b4/";
+
+  const instagramLink = "https://www.instagram.com/mo_nebo/";
+
   return (
     <>
       <div className="w-full h-halfScreen">
@@ -24,7 +33,7 @@ const Footer = () => {
         <div className="h-screen w-full bg-gradient-to-b from-[#1c1c1c] to-stone-950 flex flex-col justify-center items-center font-bebas gap-5">
           <div className="flex flex-col gap-2 justify-center items-center">
             <motion.h1
-              className="text-slate-300 text-6xl"
+              className="text-slate-300 text-4xl md:text-6xl"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -37,7 +46,7 @@ const Footer = () => {
               end of the journey
             </motion.h1>
             <motion.h2
-              className="text-slate-500 text-3xl"
+              className="text-slate-500 text-xl md:text-3xl"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -63,10 +72,57 @@ const Footer = () => {
               delay: 1,
             }}
           >
-            <FontAwesomeIcon icon={faGithub} size="4x" />
-            <FontAwesomeIcon icon={faLinkedin} size="4x" />
-            <FontAwesomeIcon icon={faInstagram} size="4x" />
-            <FontAwesomeIcon icon={faFacebook} size="4x" />
+            <motion.div
+              initial={{ scale: 1, rotateZ: 0 }}
+              whileHover={{ scale: 1.1, rotateZ: 360 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Link to={githubLink} target="_blank">
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="text-4xl md:text-7xl"
+                />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ scale: 1, rotateZ: 0 }}
+              whileHover={{ scale: 1.1, rotateZ: 360 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Link to={linkedInLink} target="_blank">
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="text-4xl md:text-7xl"
+                />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ scale: 1, rotateZ: 0 }}
+              whileHover={{ scale: 1.1, rotateZ: 360 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Link to={instagramLink} target="_blank">
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="text-4xl md:text-7xl"
+                />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ scale: 1, rotateZ: 0 }}
+              whileHover={{ scale: 1.1, rotateZ: 360 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Link to={facebookLink} target="_blank">
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  className="text-4xl md:text-7xl"
+                />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </div>
